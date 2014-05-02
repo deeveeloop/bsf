@@ -1,0 +1,39 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    border: 0 none;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+    vertical-align: baseline;
+}
+body
+{
+	background-color: #FFFFFF;
+	font-family: 'Ubuntu', sans-serif;
+    height:100%;
+    color: snow;
+}
+
+h1
+{
+    padding:20px;
+    font-size: 34px;
+    font-weight: bold;
+    background-color: grey;
+}  
+p
+{
+   padding:20px;
+   font-size: 20px;
+   color: grey;
+}
+#loader
+{
+    position: absolute;
+    top:5px;
+    left:20px;
+    display: none;
+}
