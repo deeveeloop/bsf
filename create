@@ -1,0 +1,97 @@
+#!/usr/bin/php
+<?php
+
+
+
+$method = substr($argv[1], 0,strpos($argv[1], ":"));
+$name = substr($argv[1], strpos($argv[1], ":")+1);
+
+if ($method == "model"){
+
+	$modelData = '<?php
+
+class '.$name.' extends BaseModel
+{
+	/*
+	***********************************************************
+	*
+    *  $table is name of the table you want to store your model
+	*
+   /***********************************************************/
+	
+	static protected $table="'.strtolower($name).'s";
+
+	
+}';
+
+	$fs = fopen("./app/models/".$name.".php", 'w');
+			
+			fputs($fs,$modelData);
+		fclose($fs);
+}
+
+
+
+if ($method == "restcontroller"){
+
+	$modelData = '<?php
+
+include($_SERVER["DOCUMENT_ROOT"]."/app/core/Loader.php");
+
+
+ /*
+    *************************************************************************
+    *
+    * Write method inside 
+    *
+    *************************************************************************
+    */
+
+Class '.$name.' extends BaseController
+{
+
+	
+
+} 
+
+$'.$name.' = new '.$name.'
+$'.$name.'->$_POST["method"]();
+
+?>';
+
+	$fs = fopen("./app/restcontrollers/".$name.".php", 'w');
+			
+			fputs($fs,$modelData);
+		fclose($fs);
+}
+
+if ($method == "controller"){
+
+	$modelData = '<?php
+
+ /*
+    *************************************************************************
+    *
+    * Write method inside 
+    *
+    *************************************************************************
+    */
+
+Class '.$name.' extends BaseController
+{
+
+	
+
+} 
+
+
+?>';
+
+	$fs = fopen("./app/controllers/".$name.".php", 'w');
+			
+			fputs($fs,$modelData);
+		fclose($fs);
+}
+
+
+?>

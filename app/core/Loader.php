@@ -2,7 +2,6 @@
 
 function Loader($class)
 {
-  
     $base=$_SERVER["DOCUMENT_ROOT"];
     
     if (file_exists($base.'../app/core/'.$class.'.php')) {

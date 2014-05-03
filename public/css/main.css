@@ -14,7 +14,7 @@ body
 	background-color: #FFFFFF;
 	font-family: 'Ubuntu', sans-serif;
     height:100%;
-    color: snow;
+    color: grey;
 }
 
 h1
@@ -23,6 +23,7 @@ h1
     font-size: 34px;
     font-weight: bold;
     background-color: grey;
+    color:snow;
 }  
 p
 {

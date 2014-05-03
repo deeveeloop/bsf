@@ -71,7 +71,7 @@ Example:
         if (object.render){
             var model = "asas";
 
-            $.get('../../app/resttemplates/'+object.render, function(template) {
+            $.get('../templates/'+object.render, function(template) {
                     
                         $(object.target).fadeOut('slow',function(){
                             $(this).empty();
@@ -88,9 +88,10 @@ Example:
         {
         $.ajax({
             type: 'POST',
-            url: '../../app/restcontrollers/'+object.controller+'.php',
+            url: '../ResourceController.php',
             dataType: "json",
             data: {
+                controller: object.controller,
                 method: object.method,
                 id: object.id,
                 model: object.model,
@@ -104,7 +105,7 @@ Example:
                     
                     var model = {model:result};    
 
-                    $.get('../../app/resttemplates/'+object.template, function(template) {
+                    $.get('../templates/'+object.template, function(template) {
                     
                         $(object.target).fadeOut('slow',function(){
                            $(this).empty();
@@ -209,14 +210,14 @@ Example:
         if (object.render){
             var model = "asas";
 
-            $.get('../../app/resttemplates/'+object.render, function(template) {
+            $.get('../templates/'+object.render, function(template) {
                     
-                        $(object.target).fadeOut('slow',function(){
-                            // $(this).empty();
+                        // $(object.target).fadeOut('slow',function(){
+                           
                             var html = Mustache.to_html(template, model);
                             $(object.target).append(html).fadeIn();
 
-                        });
+                        // });
 
                          
             });                
@@ -225,9 +226,10 @@ Example:
         {
         $.ajax({
             type: 'POST',
-            url: '../../app/restcontrollers/'+object.controller+'.php',
+            url: '../ResourceController.php',
             dataType: "json",
             data: {
+                controller:object.controller,
                 method: object.method,
                 id: object.id,
                 model: object.model,
@@ -241,14 +243,14 @@ Example:
                     
                     var model = {model:result};    
 
-                    $.get('../../app/resttemplates/'+object.template, function(template) {
+                    $.get('../templates/'+object.template, function(template) {
                     
-                        $(object.target).fadeOut('slow',function(){
-                           // $(this).empty();
+                        // $(object.target).fadeOut('slow',function(){
+                        
 
                            var html = Mustache.to_html(template, model);
                            $(object.target).append(html).fadeIn();
-                        });
+                        // });
                     });
                 }
 

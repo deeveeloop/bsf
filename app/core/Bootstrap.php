@@ -24,10 +24,15 @@ class Bootstrap
 			
 			$url='';
 		}
-
+		// echo "--:".$url."<br>";
 		$last = strripos($url, "/");
+		// echo "--:".$last."<br>";
 		$url2 = substr($url, 0,$last);
+		// echo "--:".$url2."<br>";		
 		$param = substr($url, $last+1);
+		// echo "--:".$param."<br>";	
+		
+
 		if(isset($_SESSION[$url2."/{id}"]))
 		{
 			

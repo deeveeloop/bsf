@@ -8,7 +8,20 @@
 	<head>
 	<body>
 		<h1>bsf - both sides framework</h1>
-		<p>mixture of php and js for easy web developing</p>		
+		<p>mixture of php and js for easy web developing</p>
+		<br>
+		<p>Example:</p>
+		<br>
+
+		<input type="text" placeholder="Name" id="name">
+		<input type="text" placeholder="Surname" id="surname">
+
+		<button id="send_button">Send</button>
+
+		<div id="target_div"></div>
+
+
+
 		<script type="text/javascript" src="/js/jquery.min.js"></script>
 		<script type="text/javascript" src="/js/jquery-migrate.min.js"></script>
 		<script type="text/javascript" src="/js/mustache.js"></script>
